@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title> Goliath ... a tiny GIANT</title>
+    <!-- build:css styles/yeoman.css -->
     <link href="/styles/slides.css" rel="stylesheet" type="text/css">
     <link href="/styles/goliath.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/bower_components/highlightjs/styles/solarized_light.css">
+    <!-- endbuild -->
   </head>
   <body>
     <div id="content" class="hidden">
@@ -146,19 +148,6 @@ end
         </ul>
         <div class="small">
         <pre><code>
-require 'goliath'
-
-class Hello < Goliath::API
-  # default to JSON output, allow Yaml as secondary
-  use Goliath::Rack::Render, ['json', 'yaml']
-
-  def response(env)
-    [200, {}, "Hello World"]
-  end
-end
-
-# > ruby hello.rb -sv
-# > [97570:INFO] 2011-02-15 00:33:51 :: Starting server on 0.0.0.0:9000 in development mode. Watch out for stones.
         </code></pre>
         </div>
         </section>
