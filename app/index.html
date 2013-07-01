@@ -5,31 +5,37 @@
     <title> Goliath ... a tiny GIANT</title>
     <!-- build:css styles/yeoman.css -->
     <link href="/styles/slides.css" rel="stylesheet" type="text/css">
-    <link href="/styles/goliath.css" rel="stylesheet" type="text/css">
+    <link href="/styles/yeoman.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/bower_components/highlightjs/styles/solarized_light.css">
     <!-- endbuild -->
   </head>
   <body>
     <div id="content" class="hidden">
+      <div id="bg-white" class="background"></div>
       <div id="bg-black" class="background"></div>
       <div id="bg-aoi" class="background"></div>
-      <div id="bg-sumo" class="background"></div>
+      <div id="bg-yo" class="background"></div>
+      <div id="bg-tools" class="background"></div>
+      <div id="bg-idea" class="background"></div>
+      <div id="bg-automate" class="background"></div>
+      <div id="bg-toolset" class="background"></div>
 
 
-      <div class="slide title centercontents transparent" data-backgroundid="bg-sumo">
-        <h1>Goliath ... a <span class="small">tiny</span> <span class="huge">GIANT</span></h1>
+      <div class="slide title centercontents transparent" data-backgroundid="bg-white">
+        <img src="/images/yeomanlogo.png" style="width: 400px">
+        <h2>... here to serve</h2>
           <section class="author">
-          F. Ros @ Riviera.rb
+          F. Ros @ <a href="http://www.telecom-valley.fr/blog/sophiaconf2013">Sophia Conf 2013</a>
           </section>
      </div>
-      <div class="slide slide-in" data-backgroundid="bg-aoi">
+      <div class="slide slide-in" data-backgroundid="bg-black">
         <section class="hcenter">
           <div class="slide-in-left">
             <img id="me" src="images/fred2.png" alt="Frederick Ros">
           </div>
           <div id="me-contact" class="slide-in-right">
             <h1>Frederick Ros</h1>
-            <p>Senior Manager, aMaDEUS</p>
+            <p>Development Support Senior Manager, aMaDEUS</p>
             <p>Dev addict</p>
              <p><img id="twitter" src="images/twitter.png" alt="twitter"/><a href="http://twitter.com/#!/sl33p3r">@sl33p3r</a></p>
             <p><img id="gplus" src="images/gplus.png"alt="google+"/><a href="https://plus.google.com/112360515366365281857">+Frederick Ros</a></p>
@@ -37,79 +43,44 @@
         </section>
       </div>
 
-      <div class="slide centercontents">
-        <h1>Traditional web servers</h1>
-        <img alt="IO jam" src="images/io.jpg"/>
+      <div class="slide centercontents transparent" data-backgroundid="bg-idea">
+        <div class="block"><h1>Go from an idea</h1><h1>to a rough prototype</h1><h1>in <span class="highlight">10 mn</span></h1></div>
       </div>
 
-      <div class="slide vcenter">
-        <h1>The IO issue</h1>
-        <section>
-        <ul id="io">
-          <li><div>L1-cache</div> <div>3 cycles</div></li>
-          <li><div>L2-cache</div> <div>14 cycles</div></li>
-          <li><div>RAM</div> <div>250 cycles</div></li>
-          <li><div>Disk</div> <div class="highlight">41 000 000 cycles</div></li>
-          <li><div>Network</div> <div class="highlight">240 000 000 cycles</div></li>
-        </ul>
-        </section>
-      </div>
-
-      <div class="slide">
-        <h1>Enters the Reactor</h1>
-        <section>
-        <p>Single threaded while loop.</p>
-        <p>Your code reacts to incoming events</p>
-        <p><div class="highlight">Watch out</div>: do not block the reactor !!</p>
-        <pre><code>
-while reactor_running?
-  expired_timers.each {|timer| timer.process }
-  new_network_io.each {|io| io.process }
-end
-        </code></pre>
-        </section>
-      </div>
-
-      <div class="slide vcenter centertext">
-        <h1>... and EventMachine</h1>
-        <section>
-        <img id="async2" src="images/async2.png" alt="Reactor + Async = Event Machine">
-        </section>
-      </div>
-      <div class="slide">
-        <h1>Spaghetti code !</h1>
-        <section>
-        Writing evented code is hard ... and ugly !
-        <pre><code>
-db.find_url { |url|
-  http.get(url) { |response|
-    email.send(response) {
-      puts 'email sent'
-    }
-  }
-}
-        </code></pre>
-        </section>
-      </div>
-      <div class="slide">
-        <h1>Ruby's Fibers</h1>
-        <section>
-          <ul>
-            <li>Available on MRI 1.9.x</li>
-            <li> ~ Continuations </li>
-            <li> Light-weigth concurrency: cheaper, easier than threads</li>
+      <div class="slide centercontents transparent" data-backgroundid="bg-tools">
+        <div class="block">
+          <h1 class="">You need to ...</h1>
+          <ul style="list-style-type: none;">
+            <li>Scaffold some of your code</li>
+            <li>Compile your CoffeScript</li>
+            <li>JSHint your files</li>
+            <li>Launch your tests</li>
+            <li>Reload your browser</li>
+            <li>...</li>
           </ul>
-          <pre><code>
-fiber = Fiber.new do
-  Fiber.yield 1
-  2
-end
+        </div>
+      </div>
 
-puts fiber.resume # => 1
-puts fiber.resume # => 2
-puts fiber.resume # => FiberError: dead fiber called
-          </code></pre>
-        </section>
+      <div class="slide centercontents transparent" data-backgroundid="bg-automate">
+        <div class="block">
+          <h1>You need to ...</h1>
+          <h1>AUTOMATE !</h1>
+        </div>
+      </div>
+
+      <div class="slide transparent" data-backgroundid="bg-toolset">
+      </div>
+
+      <div class="slide">
+        <img src="/images/bower-logo.png">
+      </div>
+
+      <div class="slide">
+        <img src="/images/grunt-logo.png">
+      </div>
+
+      <div class="slide">
+        <img src="/images/yeomanlogo.png">
       </div>
 
       <div class="slide">

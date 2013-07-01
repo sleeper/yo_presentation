@@ -1,0 +1,109 @@
+h1 .small {
+	font-size:20%;
+}
+
+.huge {
+	font-size:150%;
+}
+
+.small{
+	font-size:60%;
+}
+
+#me-contact {
+	padding-left:1em;
+}
+#twitter, #gplus {
+	vertical-align:middle;
+}
+
+.hcenter{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;box-orient:horizontal;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;box-align:center;}.hcenter *:last-child{-webkit-box-flex:1;}
+.vcenter{display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;box-orient:vertical;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;}.vcenter >*{-webkit-box-flex:1;}
+.center{margin:auto 0;}
+
+
+#test{display:-webkit-box;-webkit-box-orient:horizontal;}
+
+ul.bullet{list-style:none;padding:0;margin:0;font-size:120%;}
+ul.bullet li{padding-left:1em;text-indent:-0.7em;}
+ul.bullet li:before{content:"➪ ";}
+
+#bg-black{background:#000;}
+
+#bg-white{background:#fff;}
+
+#bg-aoi{background:#69D2E7;}
+
+#bg-yo {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background:url('/images/yeomanlogo.png') top no-repeat,#ffffff;
+}
+
+#bg-tools {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background:url('/images/btools.jpg') center no-repeat,#000;
+}
+
+#bg-idea {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background:url('/images/idea.jpg') center no-repeat,#000;
+}
+
+#bg-automate {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background:url('/images/automate.jpg') center no-repeat,#000;
+}
+
+#bg-toolset {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background:url('/images/toolset.png') center no-repeat,#fff;
+}
+
+.translucent {
+    opacity: 0.4;
+    filter: alpha(opacity = 40); /* For IE */
+}
+
+.title h1{png:#A7DBD8;}
+
+.white { color: #fff; }
+
+#async2{width:500px;height:auto;}
+
+.block {
+	font-family:'Yanone Kaffeesatz';
+	font-size: 2em;
+	font-weight: bold;
+	/*background: #f2f0f0;*/
+	background-color: rgba(242, 240, 240, 0.5);
+	text-align: center;
+	padding: 10px;
+/*	border: 1px solid red;
+*/	border-radius: 15px;
+}
+
+/*.transparency {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+*/
+/*.opaque {
+	filter: alpha(opacity=100);
+	opacity: 1;	
+}
+*/
