@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title> Goliath ... a tiny GIANT</title>
+    <title> Yeoman ... here to serve</title>
     <!-- build:css styles/yeoman.css -->
     <link href="/styles/slides.css" rel="stylesheet" type="text/css">
     <link href="/styles/yeoman.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/bower_components/highlightjs/styles/solarized_light.css">
+    <link rel="stylesheet" href="/bower_components/highlightjs/styles/github.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -71,105 +71,88 @@
       <div class="slide transparent" data-backgroundid="bg-toolset">
       </div>
 
-      <div class="slide">
-        <img src="/images/bower-logo.png">
+      <div class="slide centercontents">
+        <h1>Bower</h1>
+        <div class="hcenter">
+            <img src="/images/bower-logo.png" class="vignette" style="-webkit-box-flex:1;">
+            <div style="-webkit-box-flex:1;">
+                <ul class="arrow">
+                    <li>Javascript package management for client</li>
+                    <li>Get, update javascript packes</li>
+                    <pre><code class="bash">bower install jquery</code></pre>
+                </ul>
+            </div>
+        </div>
       </div>
 
-      <div class="slide">
-        <img src="/images/grunt-logo.png">
-      </div>
-
-      <div class="slide">
-        <img src="/images/yeomanlogo.png">
-      </div>
-
-      <div class="slide">
-        <h1>EventMachine + Fibers ➪ EM::Synchrony</h1>
-        <section>
+      <div class="slide centercontents">
+        <h1>Grunt</h1>
+        <div class="hcenter">
+        <img src="/images/grunt-logo.png" class="vignette">
         <div>
-        <pre class="small"><code>
-EventMachine.run {
-  page = EventMachine::HttpRequest.new('http://google.com/').get
-  page.errback { p "Google is down! terminate?" }
-  page.callback {
-    about = EventMachine::HttpRequest.new('http://google.com/search?q=eventmachine').get
-    about.callback { # callback nesting, ad infinitum }
-    about.errback  { # error-handling code }
-  }
-}
-        </code></pre>
-        <div style="text-align:center;">▼</div>
-        <pre class="small"><code>
-EventMachine.synchrony do
-  page = EventMachine::HttpRequest.new("http://www.google.com").get
-  about = EventMachine::HttpRequest.new('http://google.com/search?q=eventmachine').get
-  EventMachine.stop
-end
-        </code></pre>
+            <ul class="arrow">
+                <li>Make, Rake, Ant like for Javascript</li>
+                <li>Task based</li>
+                <li>Workflow management</li>
+                <li>Zillions of tasks and contribs</li>
+                <pre><code class="bash">grunt uglifyjs</code></pre>
+            </ul>
         </div>
-        </section>
+        </div>
       </div>
 
-      <div class="slide">
-        <h1>Goliath</h1>
-        <section>
+      <div class="slide centercontents">
+        <h1>Yeoman</h1>
+        <div class="hcenter">
+            <img src="/images/yeomanlogo.png" class="vignette">
+            <div>
+                <ul class="arrow">
+                    <li>Scaffold (code, Gruntfile, tests, ...)</li>
+                    <li>Reload browser based on file change</li>
+                    <li>Prepare code for production: <code>concat</code>, <code>uglifyjs</code>, optimize images, ...</li>
+                    <li>
+                        Generators based (webapp, angular, karma, emberjs, backbone, bbb, heroku, ...)
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="slide centercontents">
+        <h1>Yeoman: Generator based</h1>
+        <div class="hcenter">
+            <img src="/images/yobox.png" class="vignette">
+            <ul class="arrow">
+                <li>Webapp</li>
+                <li>Angular</li>
+                <li>Backbone</li>
+                <li>Ember</li>
+                <li>Heroku</li>
+                <li>Generator</li>
+                <li>Chrome Extension</li>
+                <li>Chrome App</li>
+                <li>...</li>
+            </ul>
+        </div>
+      </div>
+
+<!--       <div class="slide">
         <ul>
-          <li>Mix EventMachine and EM::Synchrony</li>
-          <li>Let PostRank iterates on this ...</li>
+            <li>npm install -g yo bower generator-webapp</li>
+            <li>mkdir myFunkyApp && cd myFunkyApp</li>
+            <li>yo webapp</li>
+            <li>grunt server</li>
         </ul>
-        <div class="small">
-        <pre><code>
-        </code></pre>
-        </div>
-        </section>
+      </div>
+ -->
+      <div class="slide transparent centercontents" data-backgroundid="bg-black">
+        <img src="/images/live.jpeg" style="width:796px; height: 600px;">
       </div>
 
-      <div class="slide">
-        <h1>Goliath</h1>
-        <section>
-        <ul class="bullet">
-          <li>App server</li>
-          <li>Fully-asynchronous</li>
-          <li>Streaming support</li>
-          <li>Middleware support</li>
-          <li>Simple configuration</li>
-          <li>High performance: around 3000 req/s</li>
-          <li>Readable and maitainable code</li>
-        </ul>
-        </section>
+      <div class="slide centercontents" data-backgroundid="bg-white">
+        <h1><a href="http://yeoman.io">yeoman.io</a></h1>
       </div>
 
-      <div class="slide">
-        <h1>Bonus</h1>
-        <section>
-        <ul class="bullet">
-          <li>Middlewares</li>
-          <li>Async Upload</li>
-          <li>Streaming API</li>
-          <li>Routing</li>
-          <li>Websockets</li>
-          <li>Integration testing</li>
-        </ul>
-        </section>
-      </div>
-
-      <div class="slide">
-        <h1>Use cases</h1>
-        <section>
-        <ul class="bullet">
-          <li>Interface with dbs (present dbs as REST resources)</li>
-          <li>Proxying remote web-services</li>
-          <li>Streaming API</li>
-          <li>Websockets server</li>
-        </ul>
-        </section>
-      </div>
-      <div class="slide">
-        <h1>Demo time</h1>
-        <section>
-          Stream Twitter search over a websocket !
-        </section>
-      </div>
 
     </div>
     <div id="background"></div>
