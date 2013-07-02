@@ -1,7 +1,7 @@
 @font-face{font-family:'Yanone Kaffeesatz';font-style:normal;font-weight:400;src:url('../fonts/YanoneKaffeesatz-Regular.ttf') format('truetype');}@font-face{font-family:'Permanent Marker';font-style:normal;font-weight:normal;src:local('../fonts/Permanent Marker.woff'),local('../fonts/PermanentMarker.woff'),url('../fonts/PermanentMarker.woff') format('woff');}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:normal;src:local('../fonts/Ubuntu-Regular.woff'),url('../fonts/Ubuntu-Regular.woff') format('woff');}@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('../fonts/Lato-Regular.woff'),url('../fonts/Lato-Regular.woff') format('woff');}body,html,.background,#stage,#background{width:100%;height:100%;margin:0;padding:0;font-size:15px;}
 body,html,#background{background-color:#fff;}
 #content{display:none;}
-#stage { 
+#stage {
 	background-color:transparent;
 	margin:0;
 	padding:0;
@@ -25,7 +25,7 @@ body,html,#background{background-color:#fff;}
 body{font:30px Arial;background:#000;overflow:hidden;-webkit-perspective:1000px;-moz-perspective:1000px;display:-webkit-box;display:-moz-box;display:-o-box;display:-ms-box;display:box;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;box-align:center;}
 
 .slide {
-	width:1150px;
+	width:1024px;
 	height:675px;
 	position:absolute;
 	-webkit-box-sizing:border-box;
