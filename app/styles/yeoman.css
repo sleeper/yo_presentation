@@ -13,8 +13,10 @@ h1 .small {
 #me-contact {
 	padding-left:1em;
 }
-#twitter, #gplus {
+#twitter, #gplus, #github {
 	vertical-align:middle;
+    width: 36px;
+    height: 36px;
 }
 
 .hcenter {
